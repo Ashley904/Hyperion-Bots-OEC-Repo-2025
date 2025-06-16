@@ -2,6 +2,7 @@ package pedroPathing.Utility;
 
 public class Constants {
 
+
     // Slide Constants
     public double depositSlideKSQ = 0.0;
     public double depositSlideKd = 0.0;
@@ -13,6 +14,12 @@ public class Constants {
     public double maximumDtSpeed = 1.0;
     public double rotationalKSQ = 0.0;
     public double rotationalKd = 0.0;
+
+
+    // Slide Motor Constants
+    public double depositSlidesTicksInDegrees = 3.96;
+
+
 
     public void setSlideConstants(double depositSlideKSQ, double depositSlideKd, double depositSlideKf){
 
@@ -30,5 +37,4 @@ public class Constants {
         this.rotationalKd = rotationalKd;
 
     }
-
 }

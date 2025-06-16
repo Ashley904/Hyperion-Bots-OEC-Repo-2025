@@ -10,6 +10,9 @@ public class Hardware {
     DcMotor front_right_motor = null;
     DcMotor back_right_motor = null;
 
+    DcMotor vertical_left_slide = null;
+    DcMotor vertical_right_slide = null;
+
     HardwareMap hardwareMap;
 
     public Hardware(HardwareMap hardwareMap){
@@ -35,5 +38,11 @@ public class Hardware {
         back_left_motor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         front_right_motor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         back_right_motor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+
+        vertical_left_slide = hardwareMap.get(DcMotor.class, "VerticalLeftSlide");
+        vertical_right_slide = hardwareMap.get(DcMotor.class, "VerticalRightSlide");
+
+        vertical_left_slide.setDirection(DcMotor.Direction.FORWARD);
+        vertical_right_slide.setDirection(DcMotor.Direction.FORWARD);
     }
 }
