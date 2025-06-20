@@ -9,20 +9,20 @@ import com.pedropathing.pathgen.Point;
 public class FiveSpec {
 
     // --- Main Points ---
-    public static Pose startingPose = new Pose(0, 0, Math.toRadians(0));
+    public static Pose startingPose = new Pose(8, 75, Math.toRadians(0));
 
-    public static Pose scorePreloadSpecimenPose = new Pose(0, 0, Math.toRadians(0));
+    public static Pose scorePreloadSpecimenPose = new Pose(40, 76.5, Math.toRadians(0));
 
     public static Pose grab2ndSpecimenPose = new Pose(0, 0, Math.toRadians(0));
     public static Pose grab3rdSpecimenPose = new Pose(0, 0, Math.toRadians(0));
     public static Pose grab4thSpecimenPose = new Pose(0, 0, Math.toRadians(0));
 
-    public static Pose score2ndSpecimenPose = new Pose(0, 0, Math.toRadians(0));
-    public static Pose score3rdSpecimenPose = new Pose(0, 0, Math.toRadians(0));
-    public static Pose score4thSpecimenPose = new Pose(0, 0, Math.toRadians(0));
-    public static Pose score5thSpecimenPose = new Pose(0, 0, Math.toRadians(0));
+    public static Pose score2ndSpecimenPose = new Pose(40, 74, Math.toRadians(0));
+    public static Pose score3rdSpecimenPose = new Pose(40, 72, Math.toRadians(0));
+    public static Pose score4thSpecimenPose = new Pose(40, 70, Math.toRadians(0));
+    public static Pose score5thSpecimenPose = new Pose(40, 68, Math.toRadians(0));
 
-    public static Pose partPose = new Pose(0, 0, Math.toRadians(0));
+    public static Pose partPose = new Pose(8, 33, Math.toRadians(0));
 
 
     // --- Scoring 1st Specimen(Preload) ---
