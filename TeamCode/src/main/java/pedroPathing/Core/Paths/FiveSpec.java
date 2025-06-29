@@ -35,9 +35,14 @@ public class FiveSpec {
     public PathChain scorePreload(){
 
         return new PathBuilder()
-                .addPath(new BezierLine(new Point(startingPose), new Point(scorePreloadSpecimenPose)))
+                .addPath(
+                        new BezierLine(
+                                new Point(startingPose),
+                                new Point(scorePreloadSpecimenPose)
+                        )
+                )
                 .setConstantHeadingInterpolation(scorePreloadSpecimenPose.getHeading())
-                .setZeroPowerAccelerationMultiplier(4)
+                .setZeroPowerAccelerationMultiplier(4.5)
                 .build();
     }
 
@@ -51,7 +56,7 @@ public class FiveSpec {
         return new PathBuilder()
                 .addPath(
                         new BezierCurve(
-                                new Point(40, 76.5),
+                                new Point(40, 76.5, Point.CARTESIAN),
                                 new Point(27, 40, Point.CARTESIAN),
                                 new Point(45, 36, Point.CARTESIAN)
                         )
@@ -85,14 +90,14 @@ public class FiveSpec {
                 .addPath(
                         new BezierCurve(
                                 new Point(42, 23, Point.CARTESIAN),
-                                new Point(60,23),
-                                new Point(60, 13)
+                                new Point(60,23, Point.CARTESIAN),
+                                new Point(60, 13, Point.CARTESIAN)
                         )
                 )
                 .addPath(
                         new BezierLine(
-                                new Point(60, 13),
-                                new Point(20, 13)
+                                new Point(60, 13, Point.CARTESIAN),
+                                new Point(20, 13, Point.CARTESIAN)
                         )
                 )
                 .setZeroPowerAccelerationMultiplier(8)
@@ -111,14 +116,14 @@ public class FiveSpec {
                 .addPath(
                         new BezierCurve(
                                 new Point(42, 13, Point.CARTESIAN),
-                                new Point(55,14),
-                                new Point(60, 7)
+                                new Point(55,14, Point.CARTESIAN),
+                                new Point(60, 7, Point.CARTESIAN)
                         )
                 )
                 .addPath(
                         new BezierLine(
-                                new Point(60, 7),
-                                new Point(20, 7)
+                                new Point(60, 7, Point.CARTESIAN),
+                                new Point(20, 7, Point.CARTESIAN)
                         )
                 )
                 .setZeroPowerAccelerationMultiplier(8)
@@ -136,18 +141,17 @@ public class FiveSpec {
         return new PathBuilder()
                 .addPath(
                         new BezierCurve(
-                                new Point(20,7),
-                                new Point(23, 20),
-                                new Point(15, 25)
+                                new Point(20,7, Point.CARTESIAN),
+                                new Point(23, 20, Point.CARTESIAN),
+                                new Point(15, 25, Point.CARTESIAN)
                         )
-                )
+                ).setZeroPowerAccelerationMultiplier(4)
                 .addPath(
                         new BezierLine(
-                                new Point(15,25),
+                                new Point(15,25, Point.CARTESIAN),
                                 new Point(grab2ndSpecimenPose)
                         )
-                )
-                .setZeroPowerAccelerationMultiplier(2)
+                ).setZeroPowerAccelerationMultiplier(2)
                 .setConstantHeadingInterpolation(Math.toRadians(0))
                 .build();
     }
@@ -176,16 +180,16 @@ public class FiveSpec {
                 .addPath(
                         new BezierCurve(
                                 new Point(score2ndSpecimenPose),
-                                new Point(30, 40),
-                                new Point(15, 32)
+                                new Point(30, 40, Point.CARTESIAN),
+                                new Point(15, 32, Point.CARTESIAN)
                         )
                 ).setZeroPowerAccelerationMultiplier(8)
                 .addPath(
                         new BezierLine(
-                                new Point(15, 32),
+                                new Point(15, 32, Point.CARTESIAN),
                                 new Point(grab3rdSpecimenPose)
                         )
-                ).setZeroPowerAccelerationMultiplier(2.5)
+                ).setZeroPowerAccelerationMultiplier(2)
                 .setConstantHeadingInterpolation(Math.toRadians((0)))
                 .build();
     }
@@ -194,7 +198,7 @@ public class FiveSpec {
         return new PathBuilder()
                 .addPath(
                         new BezierLine(
-                                new Point(10,32),
+                                new Point(10,32, Point.CARTESIAN),
                                 new Point(score3rdSpecimenPose)
                         )
                 )
@@ -214,16 +218,16 @@ public class FiveSpec {
                 .addPath(
                         new BezierCurve(
                                 new Point(score3rdSpecimenPose),
-                                new Point(30, 40),
-                                new Point(15, 32)
+                                new Point(30, 40, Point.CARTESIAN),
+                                new Point(15, 32, Point.CARTESIAN)
                         )
                 ).setZeroPowerAccelerationMultiplier(8)
                 .addPath(
                         new BezierLine(
-                                new Point(15, 32),
+                                new Point(15, 32, Point.CARTESIAN),
                                 new Point(grab4thSpecimenPose)
                         )
-                ).setZeroPowerAccelerationMultiplier(2.5)
+                ).setZeroPowerAccelerationMultiplier(2)
                 .setConstantHeadingInterpolation(Math.toRadians((0)))
                 .build();
     }
@@ -232,7 +236,7 @@ public class FiveSpec {
         return new PathBuilder()
                 .addPath(
                         new BezierLine(
-                                new Point(10,32),
+                                new Point(10,32, Point.CARTESIAN),
                                 new Point(score4thSpecimenPose)
                         )
                 )
@@ -252,16 +256,16 @@ public class FiveSpec {
                 .addPath(
                         new BezierCurve(
                                 new Point(score5thSpecimenPose),
-                                new Point(30, 40),
-                                new Point(15, 32)
+                                new Point(30, 40, Point.CARTESIAN),
+                                new Point(15, 32, Point.CARTESIAN)
                         )
                 ).setZeroPowerAccelerationMultiplier(8)
                 .addPath(
                         new BezierLine(
-                                new Point(15, 32),
+                                new Point(15, 32, Point.CARTESIAN),
                                 new Point(grab5thSpecimenPose)
                         )
-                ).setZeroPowerAccelerationMultiplier(2.5)
+                ).setZeroPowerAccelerationMultiplier(2)
                 .setConstantHeadingInterpolation(Math.toRadians((0)))
                 .build();
     }
@@ -270,7 +274,7 @@ public class FiveSpec {
         return new PathBuilder()
                 .addPath(
                         new BezierLine(
-                                new Point(10,32),
+                                new Point(10,32, Point.CARTESIAN),
                                 new Point(score5thSpecimenPose)
                         )
                 )
